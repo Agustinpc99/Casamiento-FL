@@ -1,0 +1,877 @@
+:root {
+  --blue: #007bff;
+  --indigo: #6610f2;
+  --purple: #6f42c1;
+  --pink: #e83e8c;
+  --red: #dc3545;
+  --orange: #fd7e14;
+  --yellow: #ffc107;
+  --green: #28a745;
+  --teal: #20c997;
+  --cyan: #17a2b8;
+  --white: #fff;
+  --gray: #6c757d;
+  --gray-dark: #343a40;
+  --primary: #007bff;
+  --secondary: #6c757d;
+  --success: #28a745;
+  --info: #17a2b8;
+  --warning: #ffc107;
+  --danger: #dc3545;
+  --light: #f8f9fa;
+  --dark: #343a40;
+  --breakpoint-xs: 0;
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+  --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+}
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+html {
+  font-family: sans-serif;
+  line-height: 1.15;
+  text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+
+footer,
+section {
+  display: block;
+}
+body {
+  margin: 0px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: rgb(33, 37, 41);
+  text-align: left;
+  background-color: rgb(255, 255, 255);
+}
+h1,
+h2,
+h3,
+h6 {
+  margin-top: 0px;
+  margin-bottom: 0.5rem;
+}
+p {
+  margin-top: 0px;
+  margin-bottom: 1rem;
+}
+a {
+  color: rgb(0, 123, 255);
+  text-decoration: none;
+  background-color: transparent;
+}
+a:hover {
+  color: rgb(0, 86, 179);
+  text-decoration: underline;
+}
+a:not([href]):not([class]) {
+  color: inherit;
+  text-decoration: none;
+}
+a:not([href]):not([class]):hover {
+  color: inherit;
+  text-decoration: none;
+}
+img {
+  vertical-align: middle;
+  border-style: none;
+}
+svg {
+  overflow: hidden;
+  vertical-align: middle;
+}
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+::-webkit-file-upload-button {
+  font: inherit;
+  appearance: button;
+}
+.h1,
+.h2,
+.h3,
+.h6,
+h1,
+h2,
+h3,
+h6 {
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  line-height: 1.2;
+}
+.h1,
+h1 {
+  font-size: 2.5rem;
+}
+.h2,
+h2 {
+  font-size: 2rem;
+}
+.h3,
+h3 {
+  font-size: 1.75rem;
+}
+.h6,
+h6 {
+  font-size: 1rem;
+}
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.col-md-6 {
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+@media (min-width: 768px) {
+  .col-md-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+}
+@media (prefers-reduced-motion: reduce) {
+}
+@-webkit-keyframes progress-bar-stripes {
+  0% {
+    background-position: 1rem 0px;
+  }
+  100% {
+    background-position: 0px 0px;
+  }
+}
+@keyframes progress-bar-stripes {
+  0% {
+    background-position: 1rem 0px;
+  }
+  100% {
+    background-position: 0px 0px;
+  }
+}
+@-webkit-keyframes spinner-border {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes spinner-border {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes spinner-grow {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes spinner-grow {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    opacity: 1;
+    transform: none;
+  }
+}
+.clearfix::after {
+  display: block;
+  clear: both;
+  content: "";
+}
+.d-flex {
+  display: flex !important;
+}
+@media (min-width: 768px) {
+  .d-md-none {
+    display: none !important;
+  }
+}
+.justify-content-center {
+  justify-content: center !important;
+}
+.align-items-center {
+  align-items: center !important;
+}
+.w-100 {
+  width: 100% !important;
+}
+.text-center {
+  text-align: center !important;
+}
+@media print {
+  *,
+  ::after,
+  ::before {
+    text-shadow: none !important;
+    box-shadow: none !important;
+  }
+  a:not(.btn) {
+    text-decoration: underline;
+  }
+  img {
+    break-inside: avoid;
+  }
+  h2,
+  h3,
+  p {
+    orphans: 3;
+    widows: 3;
+  }
+  h2,
+  h3 {
+    break-after: avoid;
+  }
+  @page {
+    size: a3;
+  }
+  body {
+    min-width: 992px !important;
+  }
+  .container {
+    min-width: 992px !important;
+  }
+}
+@font-face {
+  font-family: slick;
+  font-weight: normal;
+  font-style: normal;
+  src: url("./fonts/slick.woff") format("woff"),
+    url("./fonts/slick.ttf") format("truetype");
+}
+@keyframes a {
+  100% {
+    transform: rotate(1turn);
+  }
+}
+@media (max-height: 576px) {
+}
+.addeventatc {
+  display: inline-block;
+  position: relative;
+  z-index: 0;
+  font-weight: 600;
+  line-height: 100%;
+  background: url("https://www.addevent.com/gfx/icon-calendar-t5.png") -9999px -9999px
+      no-repeat,
+    url("https://www.addevent.com/gfx/icon-calendar-t1.svg"),
+    url("https://www.addevent.com/gfx/icon-apple-t5.svg"),
+    url("https://www.addevent.com/gfx/icon-facebook-t5.svg"),
+    url("https://www.addevent.com/gfx/icon-google-t5.svg"),
+    url("https://www.addevent.com/gfx/icon-office365-t5.svg"),
+    url("https://www.addevent.com/gfx/icon-outlook-t5.svg"),
+    url("https://www.addevent.com/gfx/icon-outlookcom-t5.svg"),
+    url("https://www.addevent.com/gfx/icon-yahoo-t5.svg") transparent;
+  font-size: 16px;
+  text-decoration: none;
+  border: none;
+  padding: 0px;
+  border-radius: 3px;
+  cursor: pointer;
+  outline: none;
+  text-shadow: rgba(0, 0, 0, 0.004) 1px 1px 1px;
+  user-select: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  color: rgb(0, 0, 0) !important;
+  -webkit-font-smoothing: antialiased !important;
+}
+.addeventatc:hover {
+  background-color: rgb(250, 250, 250);
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+}
+.addeventatc:active {
+  border-width: 2px 1px 0px;
+}
+.addeventatc .start,
+.addeventatc .end,
+.addeventatc .timezone,
+.addeventatc .title {
+  display: none !important;
+}
+.addeventatc br {
+  display: none;
+}
+:root {
+  --color-1: #4a6360;
+  --color-2: #81948b;
+  --color-3: #c6d7cf;
+  --color-4: #faf7f3;
+  --color-5: #efede7;
+  --color-6: #868686;
+  --color-7: #bfa880;
+  --fuente-1: "Cookie", cursive;
+  --fuente-2: "Open Sans", sans-serif;
+}
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: rgb(255, 255, 255);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: var(--color-2);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-1);
+}
+.boton {
+  background: rgb(255, 255, 255);
+  color: var(--color-2);
+  text-transform: uppercase;
+  font-family: var(--fuente-2);
+  font-weight: 700;
+  border-radius: 50px;
+  line-height: 15px;
+  font-size: 15px;
+  padding: 13px 30px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 5px -1px;
+  transition: 0.5s;
+}
+.boton:hover {
+  background: var(--color-2);
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+.title {
+  width: 100%;
+  display: inline-block;
+  font-family: var(--fuente-1);
+  color: var(--color-1);
+  font-size: 60px;
+  line-height: 60px;
+  margin-bottom: 0px;
+}
+.subtitle {
+  width: 100%;
+  display: inline-block;
+  font-family: var(--fuente-2);
+  color: var(--color-2);
+  font-size: 20px;
+  font-weight: 400;
+}
+a {
+  transition: 0.5s;
+}
+section.portada {
+  width: 100%;
+  padding-bottom: 20%;
+  background-size: cover;
+  color: rgb(255, 255, 255);
+  position: relative;
+}
+section.portada::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(74, 79, 96, 0.65);
+  z-index: 0;
+  top: 0px;
+  left: 0px;
+}
+section.portada::after {
+  background-image: url("../img/img_ondas01.svg");
+  position: absolute;
+  content: "";
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  height: 100%;
+  width: 100%;
+  bottom: -10%;
+  z-index: 9;
+}
+section.portada .container .row:first-child {
+  height: 100vh;
+}
+section.portada .content-portada {
+  width: 70%;
+  z-index: 999;
+  position: relative;
+}
+section.portada .content-portada span.fecha {
+  display: table;
+  white-space: nowrap;
+  width: 100%;
+  font-family: var(--fuente-2);
+  font-weight: 300;
+  font-size: 25px;
+  color: rgb(255, 255, 255);
+}
+section.portada .content-portada span.fecha::before {
+  right: -25%;
+}
+section.portada .content-portada span.fecha::after {
+  left: -25%;
+}
+section.portada .content-portada span::before,
+section.portada .content-portada span::after {
+  border-top: 1px solid rgb(255, 255, 255);
+  content: "";
+  display: table-cell;
+  position: relative;
+  top: 0.9em;
+  width: 15%;
+}
+section.portada .content-portada h1 {
+  width: 100%;
+  text-align: center;
+  font-family: var(--fuente-1);
+  font-size: 130px;
+}
+section.portada .box-nombres-fecha-portada .line {
+  height: 1px;
+  width: 50%;
+  background-color: rgb(255, 255, 255);
+  margin: 20px auto 0px;
+}
+section.portada .box-nombres-fecha-portada h1 span {
+  background-color: var(--color-3);
+  display: inline-block;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  font-size: 40px;
+  font-family: var(--fuente-1);
+  font-weight: 300;
+  color: var(--color-1);
+}
+section.portada .box-frase-portada {
+  margin-top: 50px;
+}
+section.portada .box-frase-portada p {
+  font-family: var(--fuente-2);
+  font-weight: 300;
+  font-size: 28px;
+  text-align: center;
+}
+section.portada .box-frase-portada p img {
+  width: 30px;
+  margin: 10px 0px;
+}
+section.portada .portada-flor-izq-sup {
+  position: absolute;
+  top: -30px;
+  left: 0px;
+  width: 15%;
+}
+section.portada .portada-flor-der-inf {
+  position: absolute;
+  bottom: 30%;
+  right: 0px;
+  width: 20%;
+}
+section.portada .portada-flor-izq-inf {
+  position: absolute;
+  bottom: -38%;
+  left: 0px;
+  width: 14%;
+  z-index: 999;
+}
+section.portada .flecha-continuar {
+  width: 50px;
+  position: absolute;
+  bottom: -15%;
+}
+section.cuenta-regresiva {
+  position: relative;
+  height: 360px;
+  background-color: var(--color-4);
+}
+section.cuenta-regresiva .box-aros {
+  width: 470px;
+  height: 470px;
+  background: url("../img/img_circuloContador01.svg") center center no-repeat;
+  position: absolute;
+  z-index: 99;
+  top: -200px;
+}
+section.cuenta-regresiva .box-aros .box-circulo {
+  width: 315px;
+  height: 315px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 15px -1px;
+}
+section.cuenta-regresiva .box-aros .box-circulo span.falta {
+  width: 100%;
+  text-align: center;
+  display: inline-block;
+  font-family: var(--fuente-2);
+  font-weight: 300;
+  font-size: 40px;
+  color: var(--color-7);
+  margin-top: 30px;
+}
+section.cuenta-regresiva .box-aros .box-circulo .corazon-falta {
+  width: 18%;
+  margin-top: 5px;
+}
+section.cuenta-regresiva .reloj {
+  margin-top: 10px;
+  margin-bottom: 25px;
+}
+section.cuenta-regresiva .reloj-col {
+  width: 25%;
+  border-right: 1px solid rgb(204, 204, 204);
+  padding: 0px 8px;
+  float: left;
+}
+section.cuenta-regresiva .reloj-col.no-border {
+  border: none;
+}
+section.cuenta-regresiva .reloj-col span.number {
+  display: inline-block;
+  width: 100%;
+  color: var(--color-6);
+  font-family: var(--fuente-2);
+  font-weight: 700;
+  font-size: 35px;
+}
+section.cuenta-regresiva .reloj-col span.time {
+  display: inline-block;
+  width: 100%;
+  color: var(--color-7);
+  font-family: var(--fuente-2);
+  font-size: 20px;
+  font-weight: 300;
+}
+section.ceremonia-fiesta {
+  background: url(../img/img_lineas01.svg) center 0 no-repeat var(--color-4);
+  padding-bottom: 20%;
+  position: relative;
+}
+section.ceremonia-fiesta .col-ceremonia {
+  z-index: 999;
+}
+section.ceremonia-fiesta .col-ceremonia h3 {
+  font-family: var(--fuente-1);
+  font-size: 40px;
+  color: rgb(255, 255, 255);
+  background-color: var(--color-2);
+  display: inline-block;
+  position: relative;
+  min-width: 40%;
+  padding: 0px;
+}
+section.ceremonia-fiesta .col-ceremonia h3::after {
+  background-image: url("../img/img_cinta02.svg");
+  position: absolute;
+  content: "";
+  background-repeat: no-repeat;
+  background-position: left center;
+  height: 100%;
+  width: 16px;
+  right: -15px;
+  top: 0px;
+  background-size: contain !important;
+}
+section.ceremonia-fiesta .col-ceremonia h3::before {
+  background-image: url("../img/img_cinta01.svg");
+  position: absolute;
+  content: "";
+  background-repeat: no-repeat;
+  background-position: right center;
+  height: 100%;
+  width: 16px;
+  left: -15px;
+  top: 0px;
+  background-size: contain !important;
+}
+section.ceremonia-fiesta .info-col {
+  margin-top: 30px;
+}
+section.ceremonia-fiesta .info-col .info-box {
+  margin-bottom: 45px;
+}
+section.ceremonia-fiesta .info-col .info-box h6 {
+  font-family: var(--fuente-2);
+  color: var(--color-2);
+  font-size: 25px;
+  font-weight: 700;
+}
+section.ceremonia-fiesta .info-col .info-box p {
+  font-family: var(--fuente-2);
+  color: var(--color-2);
+  font-size: 20px;
+  font-weight: 400;
+}
+section.ceremonia-fiesta .info-col .info-box a.boton {
+  margin-top: 5px;
+  display: inline-block;
+  width: 50%;
+}
+section.ceremonia-fiesta::after {
+  background-image: url("../img/img_ondas02.svg");
+  position: absolute;
+  content: "";
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  height: 100%;
+  width: 100%;
+  bottom: 0px;
+  background-size: contain !important;
+}
+section.ceremonia-fiesta .ceremonia-fiesta-flor-der {
+  position: absolute;
+  bottom: 20%;
+  right: 0px;
+  width: 13%;
+}
+section.ceremonia-fiesta .addeventatc .nameBtn {
+  color: var(--color-2);
+}
+section.ceremonia-fiesta .addeventatc:hover .nameBtn {
+  color: rgb(255, 255, 255);
+}
+section.regalos {
+  background: url("../img/img_texturaFondo.jpg") left top repeat var(--color-4);
+  padding-top: 14%;
+  position: relative;
+  padding-bottom: 10%;
+}
+section.regalos .anim-regalos {
+  width: 70px;
+  margin: 1px auto 40px;
+}
+section.regalos .regalos-flor-der {
+  position: absolute;
+  bottom: 20%;
+  right: 0px;
+  width: 15%;
+}
+section.footer {
+  position: relative;
+  background: url("../img/img_texturaFondo.jpg") left top repeat var(--color-4);
+  padding-bottom: 10%;
+  padding-top: 10%;
+  margin-top: -2px;
+}
+section.footer .addeventatc span.nameBtn {
+  font-weight: 500;
+  transition: 0.5s;
+  color: var(--color-2) !important;
+}
+section.footer .addeventatc span.nameBtn:hover {
+  color: var(--color-1) !important;
+}
+footer {
+  background-color: var(--color-2);
+  font-family: var(--fuente-2);
+  font-weight: 400;
+  padding: 20px 0px;
+}
+footer p {
+  width: 100%;
+  text-align: center;
+  font-size: 14px;
+  margin-top: 1rem;
+  color: rgb(255, 255, 255);
+}
+footer p a {
+  color: rgb(255, 255, 255);
+  transition: 0.5s;
+}
+footer p a:hover {
+  text-decoration: none;
+  color: var(--color-5);
+}
+@media only screen and (max-width: 767px) {
+  .title {
+    font-size: 55px;
+    line-height: 40px;
+    padding: 0px 15px;
+  }
+  .subtitle {
+    font-size: 19px;
+    padding: 0px 15px;
+    margin-top: 25px;
+  }
+  section.portada .content-portada h1 {
+    font-size: 100px;
+    line-height: 65px;
+  }
+  section.cuenta-regresiva .box-aros {
+    width: 360px;
+    height: 360px;
+  }
+  section.portada .box-nombres-fecha-portada h1 span {
+    font-size: 40px;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    margin-bottom: 15px;
+  }
+  section.portada .content-portada span.fecha::before {
+    right: -40px;
+  }
+  section.portada .content-portada span.fecha::after {
+    left: -40px;
+  }
+  section.portada .content-portada {
+    width: 95%;
+  }
+  section.portada .content-portada span.fecha {
+    font-size: 25px;
+    margin-bottom: 35px;
+  }
+  section.portada {
+    padding-bottom: 70%;
+  }
+  section.portada .box-frase-portada p {
+    font-size: 20px;
+  }
+  section.portada .box-frase-portada {
+    margin-top: 25px;
+  }
+  section.portada::after {
+    bottom: -2%;
+  }
+  section.cuenta-regresiva .box-aros .box-circulo span.falta {
+    font-size: 40px;
+    margin-top: 0px;
+  }
+  section.cuenta-regresiva .reloj-col span.number {
+    font-size: 30px;
+  }
+  section.cuenta-regresiva .reloj-col span.time {
+    font-size: 18px;
+  }
+  section.portada .portada-flor-izq-sup {
+    width: 33%;
+  }
+  section.portada img.portada-flor-der-inf {
+    width: 30%;
+  }
+  section.cuenta-regresiva .box-aros .box-circulo {
+    padding: 28px 20px;
+    height: 270px;
+    width: 270px;
+    max-width: 350px;
+  }
+  section.ceremonia-fiesta .col-ceremonia h3 {
+    padding: 8px 30px;
+    font-size: 50px;
+  }
+  section.portada img.portada-flor-izq-inf {
+    width: 25%;
+    bottom: -25%;
+  }
+  section.footer {
+    padding-bottom: 20%;
+    padding-top: 30%;
+  }
+  section.regalos {
+    padding-top: 90px;
+    padding-bottom: 25%;
+  }
+  section.ceremonia-fiesta {
+    padding-bottom: 35%;
+  }
+  section.portada .portada-flor-der-inf {
+    bottom: 25%;
+    width: 35%;
+  }
+  section.portada .portada-flor-izq-inf {
+    bottom: -60%;
+    width: 22%;
+  }
+  section.regalos .regalos-flor-der {
+    bottom: 16%;
+    width: 26%;
+  }
+  section.ceremonia-fiesta .info-col .info-box a.boton {
+    min-width: 80%;
+  }
+  section.ceremonia-fiesta .ceremonia-fiesta-flor-der {
+    width: 30%;
+    bottom: 38%;
+  }
+  section.cuenta-regresiva {
+    height: 290px;
+  }
+  section.ceremonia-fiesta::after {
+    bottom: -2px;
+  }
+}
+@media only screen and (min-width: 750px) {
+  section.ceremonia-fiesta .ceremonia-fiesta-flor-der {
+    width: 16%;
+  }
+}
+.addeventatc .start,
+.addeventatc .end,
+.addeventatc .timezone,
+.addeventatc .title {
+  display: none !important;
+}
+
+.ceremonia-fiesta > .container {
+  display: flex;
+  justify-content: center;
+}
+
+.col-ceremonia {
+  width: 100%;
+}
+
+.portada {
+  background-image: url(../img/prueba1.JPG);
+  background-position: center;
+}
